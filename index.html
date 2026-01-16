@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rittenregistratie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mijn Rit</h1>
+        
+        <div class="switch-field">
+            <label>Type rit:</label>
+            <select id="ritType">
+                <option value="zakelijk">Zakelijk</option>
+                <option value="prive">Privé</option>
+            </select>
+        </div>
+
+        <div id="statusDisplay">
+            <p>Tijd: <span id="timer">00:00:00</span></p>
+            <p>Afstand: <span id="kmTeller">0.00</span> km</p>
+        </div>
+
+        <button id="startBtn" onclick="startRit()">Start Rit</button>
+        <button id="stopBtn" onclick="stopRit()" disabled>Stop Rit</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
