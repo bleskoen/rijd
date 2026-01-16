@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Beheer Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-white border-bottom shadow-sm">
+        <div class="container">
+            <span class="navbar-brand">🚖 Ritbeheer</span>
+            <button id="logoutBtn" class="btn btn-outline-danger">Uitloggen</button>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card p-3">
+                    <h4>Recente Ritten</h4>
+                    <table class="table table-hover mt-3">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Chauffeur</th>
+                                <th>Type</th>
+                                <th>Datum</th>
+                                <th>Afstand</th>
+                                <th>Actie</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ridesTable">
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h5>Geselecteerde Route</h5>
+                    <div id="map" style="height: 300px;"></div>
+                    <div id="routeInfo" class="mt-2 text-muted small">Klik op een rit om de route te zien.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
