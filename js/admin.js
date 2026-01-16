@@ -2,7 +2,7 @@ import { db, auth } from './firebase-config.js';
 // ... andere imports ...
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
-const adminEmail = "JOUW_ADMIN_EMAIL@GMAIL.COM"; // <--- Zelfde email als hierboven
+const adminEmail = "bleskoen@gmail.com"; // <--- Zelfde email als hierboven
 
 onAuthStateChanged(auth, user => {
     if (!user) {
