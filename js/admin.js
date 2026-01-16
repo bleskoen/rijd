@@ -1,4 +1,20 @@
 import { db, auth } from './firebase-config.js';
+// ... andere imports ...
+import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+
+const adminEmail = "JOUW_ADMIN_EMAIL@GMAIL.COM"; // <--- Zelfde email als hierboven
+
+onAuthStateChanged(auth, user => {
+    if (!user) {
+        // Niet ingelogd? Terug naar start
+        window.location.href = "index.html";
+    } else if (user.email !== adminEmail) {
+        // Wel ingelogd, maar geen admin? Terug naar chauffeur pagina
+        alert("Geen toegang! U wordt teruggestuurd.");
+        window.location.href = "driver.html";
+    }
+    // Als we hier komen, is het de admin. De rest van het script mag draaien.
+import { db, auth } from './firebase-config.js';
 import { collection, query, orderBy, onSnapshot } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 import { signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
