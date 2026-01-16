@@ -4,12 +4,13 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "PLAK_HIER_JE_API_KEY",
-    authDomain: "PLAK_HIER_JE_PROJECT.firebaseapp.com",
-    projectId: "PLAK_HIER_JE_PROJECT_ID",
-    storageBucket: "PLAK_HIER_JE_PROJECT.appspot.com",
-    messagingSenderId: "...",
-    appId: "..."
+    apiKey: "AIzaSyA5TSw1-_CIMCM1xHq0IgxGfqJs4VcnOVY",
+  authDomain: "autorit.firebaseapp.com",
+  projectId: "autorit",
+  storageBucket: "autorit.firebasestorage.app",
+  messagingSenderId: "491125877433",
+  appId: "1:491125877433:web:a526e3f5a612bdf0588968",
+  measurementId: "G-C2EFYS8JXL"
 };
 
 const app = initializeApp(firebaseConfig);
